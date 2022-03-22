@@ -1,6 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State createState() => HomePageState();
+}
+
+class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
+  final _formatter = NumberFormat("#,###");
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this, // the SingleTickerProviderStateMixin
+      duration: const Duration(milliseconds: 1000),
+    );
+
+    _animation = CurveTween(curve: Curves.fastOutSlowIn).animate(_controller);
+    _controller.forward();
+
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,12 +45,17 @@ class HomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(
-                      "\$2589.90",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 36,
-                          fontWeight: FontWeight.w700),
+                    AnimatedBuilder(
+                      animation: _animation,
+                      builder: (context, _) {
+                        return Text(
+                          '${_formatter.format(2589 * _animation.value)}P',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 36,
+                              fontWeight: FontWeight.w700),
+                        );
+                      },
                     ),
                     Container(
                       child: Row(
