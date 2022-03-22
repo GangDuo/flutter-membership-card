@@ -6,6 +6,7 @@
 import 'package:flutter/material.dart';
 import 'screens/cards_page.dart';
 import 'screens/homapage.dart';
+import 'screens/barcode_page.dart';
 
 void main() => runApp(WalletAppClone());
 
@@ -59,7 +60,11 @@ class _WalletAppState extends State<WalletApp> {
         height: 72,
         width: 72,
         child: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return BarcodePage();
+              }));
+            },
             elevation: 0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
