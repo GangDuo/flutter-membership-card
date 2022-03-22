@@ -55,10 +55,21 @@ class _WalletAppState extends State<WalletApp> {
         showUnselectedLabels: true,
         iconSize: 30,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        elevation: 0,
-        child: Icon(Icons.add),
+      floatingActionButton: SizedBox(
+        height: 72,
+        width: 72,
+        child: FloatingActionButton(
+            onPressed: () {},
+            elevation: 0,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.qr_code),
+                Text('使う'),
+              ],
+            ),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: screens[selectedTab],
