@@ -7,22 +7,39 @@ class BarcodePage extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('バーコード'),
+        elevation: 0.0,
       ),
-      body: new Container(
-        padding: new EdgeInsets.all(32.0),
-        child: new Center(
-          child: new Column(
-              children: <Widget> [
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+            colors: [
+              Colors.blue,
+              Color.fromRGBO(38, 81, 158, 1),
+            ],
+          ),
+        ),
+        child: Column(children: <Widget>[
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 36),
+            margin: EdgeInsets.symmetric(horizontal: 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              color: Colors.white,
+            ),
+            child: Center(
+              child: Column(children: <Widget>[
                 BarcodeWidget(
                   barcode: Barcode.ean13(), // Barcode type and settings
                   data: '999999999999', // Content
                   width: 200,
                   height: 80,
                 ),
-              ]
+              ]),
+            ),
           ),
-        ),
-      ),
+        ])),
     );
   }
 }
