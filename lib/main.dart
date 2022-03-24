@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'screens/cards_page.dart';
 import 'screens/homapage.dart';
 import 'screens/barcode_page.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() => runApp(WalletAppClone());
 
@@ -70,7 +71,7 @@ class _WalletAppState extends State<WalletApp> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(Icons.qr_code),
+                Icon(CupertinoIcons.barcode),
                 Text('使う'),
               ],
             ),
