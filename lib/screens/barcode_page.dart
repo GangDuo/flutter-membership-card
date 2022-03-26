@@ -36,6 +36,22 @@ class BarcodePage extends StatelessWidget {
                   width: 200,
                   height: 80,
                 ),
+                SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "03:00",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18),
+                    ),
+                    SizedBox(width: 16),
+                    Icon(
+                      Icons.refresh,
+                    ),
+                  ],
+                ),
               ]),
             ),
           ),
