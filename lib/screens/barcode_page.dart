@@ -1,5 +1,6 @@
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
+import '../components/Infinite_loop_timer_widget.dart';
 
 class BarcodePage extends StatelessWidget {
   @override
@@ -37,21 +38,7 @@ class BarcodePage extends StatelessWidget {
                   height: 80,
                 ),
                 SizedBox(height: 8),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      "03:00",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18),
-                    ),
-                    SizedBox(width: 16),
-                    Icon(
-                      Icons.refresh,
-                    ),
-                  ],
-                ),
+                InfiniteLoopTimerWidget(isVisible: false,),
               ]),
             ),
           ),
