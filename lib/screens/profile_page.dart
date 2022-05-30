@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "my profile",
+          "アカウント情報",
           style: Theme.of(context).textTheme.headline6,
         ),
         iconTheme: const IconThemeData(color: Colors.black),
@@ -57,14 +57,14 @@ class ProfilePage extends StatelessWidget {
           ),
           ListTile(
             title: Text(
-              "notifications",
+              "通知設定",
               style: _itemHeader,
             ),
             leading: const Icon(Icons.notifications),
           ),
           SwitchListTile(
             value: true,
-            title: const Text("email notifications"),
+            title: const Text("メール通知"),
             onChanged: (value) {},
             secondary: const SizedBox(
               width: 10,
@@ -72,7 +72,7 @@ class ProfilePage extends StatelessWidget {
           ),
           SwitchListTile(
             value: false,
-            title: const Text("push notifications"),
+            title: const Text("プッシュ通知"),
             onChanged: (value) {},
             secondary: const SizedBox(
               width: 10,
@@ -81,7 +81,7 @@ class ProfilePage extends StatelessWidget {
           _buildDivider(),
           ListTile(
             title: Text(
-              "privacy",
+              "プロフィール",
               style: _itemHeader,
             ),
             leading: const Icon(Icons.person),
@@ -108,18 +108,18 @@ class ProfilePage extends StatelessWidget {
           ),
           _buildDivider(),
           const ListTile(
-            title: Text("feedback"),
-            subtitle: Text("we would love to hear your experience"),
+            title: Text("フィードバック"),
+            subtitle: Text(""),
             leading: Icon(Icons.feedback),
           ),
           const ListTile(
-            title: Text("terms and conditions"),
-            subtitle: Text("legal, terms and conditions"),
+            title: Text("利用規約・ガイドライン"),
+            subtitle: Text(""),
             leading: Icon(FontAwesomeIcons.fileContract),
           ),
           const ListTile(
-            title: Text("logout"),
-            subtitle: Text("you can logout from here"),
+            title: Text("ログアウト"),
+            subtitle: Text(""),
             leading: Icon(Icons.exit_to_app),
           ),
         ],
