@@ -86,27 +86,69 @@ class ProfilePage extends StatelessWidget {
             ),
             leading: const Icon(Icons.person),
           ),
-          RadioListTile(
-            value: true,
-            groupValue: true,
-            title: const Text("private"),
-            onChanged: (dynamic value) {},
-            secondary: const SizedBox(
-              width: 10,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const TextField(
+                    decoration: InputDecoration(
+                      labelText: "姓",
+                      helperText: "例：佐藤",
+                    ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  const TextField(
+                    decoration: InputDecoration(
+                      labelText: "名",
+                      helperText: "例：一郎",
+                    ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  const TextField(
+                    decoration: InputDecoration(
+                      labelText: "姓（カナ）",
+                      helperText: "例：サトウ",
+                    ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  const TextField(
+                    decoration: InputDecoration(
+                      labelText: "名（カナ）",
+                      helperText: "例：イチロウ",
+                    ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  InputDatePickerFormField(
+                    firstDate: DateTime(DateTime.now().year - 5),
+                    lastDate: DateTime(DateTime.now().year + 5),
+                    initialDate: DateTime.now(),
+                    fieldLabelText: "誕生日",
+                  ),
+                  const SizedBox(height: 10.0),
+                  const TextField(
+                    decoration: InputDecoration(
+                      labelText: "メールアドレス",
+                    ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ]
             ),
-            controlAffinity: ListTileControlAffinity.trailing,
           ),
-          RadioListTile(
-            value: false,
-            groupValue: true,
-            controlAffinity: ListTileControlAffinity.trailing,
-            title: const Text("public"),
-            onChanged: (dynamic value) {},
-            secondary: const SizedBox(
-              width: 10,
-            ),
-          ),
-          _buildDivider(),
           const ListTile(
             title: Text("フィードバック"),
             subtitle: Text(""),
