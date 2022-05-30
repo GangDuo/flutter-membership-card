@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'profile_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -67,13 +68,20 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                           SizedBox(
                             width: 16,
                           ),
-                          CircleAvatar(
-                            radius: 25,
-                            backgroundColor: Colors.white,
-                            child: ClipOval(
-                              child: Image.network(
-                                'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F6.jpg?alt=media',
-                                fit: BoxFit.contain,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                                return ProfilePage();
+                              }));
+                            },
+                            child: CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Colors.white,
+                              child: ClipOval(
+                                child: Image.network(
+                                  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F6.jpg?alt=media',
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
                           )
