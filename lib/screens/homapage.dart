@@ -91,7 +91,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                   ],
                 ),
                 Text(
-                  "Available Balance",
+                  "利用可能ポイント",
                   style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
@@ -240,7 +240,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "Recent Transactions",
+                              "ポイント履歴",
                               style: TextStyle(
                                   fontWeight: FontWeight.w900,
                                   fontSize: 18,
@@ -266,7 +266,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                             children: <Widget>[
                               Container(
                                 child: Text(
-                                  "All",
+                                  "すべて",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 14,
@@ -299,7 +299,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                                       width: 8,
                                     ),
                                     Text(
-                                      "Income",
+                                      "獲得",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w700,
                                           fontSize: 14,
@@ -334,7 +334,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                                       width: 8,
                                     ),
                                     Text(
-                                      "Expenses",
+                                      "利用",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w700,
                                           fontSize: 14,
@@ -363,7 +363,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                       ),
                       Container(
                         child: Text(
-                          "TODAY",
+                          "今日",
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w700,
@@ -405,14 +405,14 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        "Grocery",
+                                        "前橋本店",
                                         style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
                                       ),
                                       Text(
-                                        "Payment from user",
+                                        "お買い物",
                                         style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w700,
@@ -425,14 +425,14 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: <Widget>[
                                     Text(
-                                      "+\$50.5",
+                                      "+50",
                                       style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.lightGreen),
                                     ),
                                     Text(
-                                      "26 Jan",
+                                      "16:37",
                                       style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w700,
@@ -454,7 +454,7 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                       ),
                       Container(
                         child: Text(
-                          "YESTERDAY",
+                          "20yy/m/d",
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w700,
@@ -496,14 +496,14 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
-                                        "Petrol",
+                                        "前橋本店",
                                         style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
                                       ),
                                       Text(
-                                        "Payment from user",
+                                        "ポイントを利用",
                                         style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w700,
@@ -516,14 +516,14 @@ class HomePageState extends State<HomePage> with SingleTickerProviderStateMixin 
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: <Widget>[
                                     Text(
-                                      "-\$500.5",
+                                      "-500",
                                       style: TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.orange),
                                     ),
                                     Text(
-                                      "26 Jan",
+                                      "13:05",
                                       style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w700,

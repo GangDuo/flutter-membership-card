@@ -25,7 +25,7 @@ class CardPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Your Cards",
+                              "ポイントカード",
                               style: TextStyle(
                                   fontWeight: FontWeight.w900,
                                   fontSize: 24,
@@ -134,7 +134,7 @@ class CardPage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                "VISA",
+                                "HumptyDumpty",
                                 style: TextStyle(
                                     fontStyle: FontStyle.italic,
                                     fontSize: 28,
@@ -164,7 +164,7 @@ class CardPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    "CARD HOLDER",
+                                    "",
                                     style: TextStyle(
                                         fontSize: 12,
                                         color: Colors.blue[100],
@@ -185,7 +185,7 @@ class CardPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    "EXPIRES",
+                                    "月/年",
                                     style: TextStyle(
                                         fontSize: 12,
                                         color: Colors.blue[100],
