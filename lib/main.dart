@@ -6,7 +6,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'components/wallet_app.dart';
+import 'components/auth_gate.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +25,7 @@ class WalletAppClone extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WalletApp(),
+      home: AuthGate(),
       debugShowCheckedModeBanner: false,
     );
   }
