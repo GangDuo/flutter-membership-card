@@ -8,8 +8,16 @@ import 'screens/cards_page.dart';
 import 'screens/homapage.dart';
 import 'screens/barcode_page.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(WalletAppClone());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(WalletAppClone());
+}
 
 class WalletAppClone extends StatelessWidget {
   static const String path = 'lib/src/walletapp_ui/main.dart';
