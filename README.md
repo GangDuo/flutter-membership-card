@@ -8,3 +8,7 @@ A new Flutter project.
 ```shell
 flutterfire configure
 ```
+
+### 環境変数を設定する
+#### GOOGLE_CLIENT_ID
+FirebaseConsoleからWeb client IDをコピーする。
